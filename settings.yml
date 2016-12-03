@@ -1,0 +1,10 @@
+---
+:minutes:
+  - 3
+  - 10
+  - 50
+  - 100
+  - 500
+:extra_messages:
+  14: Extra message test!
+:pause: 1
