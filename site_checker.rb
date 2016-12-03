@@ -1,6 +1,7 @@
 require 'uri'
 require 'net/http'
 require 'yaml'
+require './mail_sender'
 
 
 class SiteChecker
@@ -62,8 +63,10 @@ class SiteChecker
   end
 
   def send_message
-    msg = message_text
-    puts msg if msg
+    if msg = message_text
+      MailSender.new.send_mail(@settings[:email], msg)
+      puts msg
+    end
   end
 
   def start_checking_loop url_text, pause
