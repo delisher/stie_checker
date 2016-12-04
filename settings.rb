@@ -1,6 +1,3 @@
-require 'uri'
-require 'net/http'
-require "httparty"
 require 'yaml'
 require './mail_sender'
 

@@ -1,7 +1,6 @@
 require 'uri'
 require 'net/http'
 require "httparty"
-require 'yaml'
 require './mail_sender'
 require './settings'
 
@@ -54,7 +53,7 @@ class SiteChecker
   def send_message
     if msg = message_text
       MailSender.new.send_mail(settings.email, msg) if settings.email
-      MailSender.new.send_mail(settings.email2sms_email, msg) settings.email2sms_email
+      MailSender.new.send_mail(settings.email2sms_email, msg) if settings.email2sms_email
       puts msg
     end
   end
