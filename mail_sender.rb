@@ -18,7 +18,7 @@ class MailSender
     mail = Mail.new do
       from     'ResourceMonitoring'
       to       address
-      subject  'Resource MOnitoring'
+      subject  'Resource Monitoring'
       body     text
     end
 
