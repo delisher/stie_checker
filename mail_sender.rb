@@ -14,7 +14,7 @@ class MailSender
     end
   end
   
-  def send_mail(address, text)
+  def send_mail address, text
     mail = Mail.new do
       from     'ResourceMonitoring'
       to       address
